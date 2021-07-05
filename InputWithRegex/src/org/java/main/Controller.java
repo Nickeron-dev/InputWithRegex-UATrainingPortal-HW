@@ -4,6 +4,9 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.regex.Pattern;
 
+/**
+ * Created by Koshkin Illia on 04.07.2021.
+ */
 public class Controller {
 	
 	private Model model;
@@ -35,6 +38,8 @@ public class Controller {
 		view.printMessage(View.ASK_FOR_NICKNAME_INPUT);
 		model.addNicknameToCurrentContact(getInputValue(GlobalConstants.NICKNAME_REGEX));
 		
+		view.printMessage(View.ASK_FOR_COMMENT_INPUT);
+		model.addCommentToCurrentContact(getInputValue(GlobalConstants.COMMENT_REGEX));
 		
 	}
 	

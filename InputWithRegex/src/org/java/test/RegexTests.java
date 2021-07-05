@@ -13,7 +13,7 @@ public class RegexTests {
 
 	// REGEX tests
 	@Test
-	public void LastNameRegexTest() {
+	public void lastNameRegexTest() {
 		
 		boolean firstTest = Pattern.compile(GlobalConstants.LAST_NAME_REGEX).matcher("Jack").matches();
 		Assert.assertTrue(firstTest);
@@ -27,7 +27,7 @@ public class RegexTests {
 	}
 	
 	@Test
-	public void NameRegexTest() {
+	public void nameRegexTest() {
 		
 		boolean firstTest = Pattern.compile(GlobalConstants.FIRST_NAME_REGEX).matcher("Jack").matches();
 		Assert.assertTrue(firstTest);
@@ -41,7 +41,7 @@ public class RegexTests {
 	}
 	
 	@Test
-	public void PatronymicRegexTest() {
+	public void patronymicRegexTest() {
 		
 		boolean firstTest = Pattern.compile(GlobalConstants.PATRONYMIC_REGEX).matcher("Jack").matches();
 		Assert.assertTrue(firstTest);
@@ -55,7 +55,7 @@ public class RegexTests {
 	}
 	
 	@Test
-	public void NicknameRegexTest() {
+	public void nicknameRegexTest() {
 		
 		boolean firstTest = Pattern.compile(GlobalConstants.NICKNAME_REGEX).matcher("Happy").matches();
 		Assert.assertTrue(firstTest);
@@ -69,7 +69,21 @@ public class RegexTests {
 	}
 	
 	@Test
-	public void PhoneRegexTest() {
+	public void commentRegexTest() {
+		
+		boolean firstTest = Pattern.compile(GlobalConstants.COMMENT_REGEX).matcher("Happy asdfasdf 058-123-4567.").matches();
+		Assert.assertTrue(firstTest);
+		
+		boolean secondTest = Pattern.compile(GlobalConstants.COMMENT_REGEX).matcher("").matches();
+		Assert.assertEquals(false, secondTest);
+		
+		boolean thirdTest = Pattern.compile(GlobalConstants.COMMENT_REGEX).matcher("123456789101112131415161718192021234567891011121314151617181920222").matches();
+		Assert.assertFalse(thirdTest);
+		
+	}
+	
+	@Test
+	public void phoneRegexTest() {
 		
 		boolean firstTest = Pattern.compile(GlobalConstants.PHONE_REGEX).matcher("067-123-45-67").matches();
 		Assert.assertTrue(firstTest);

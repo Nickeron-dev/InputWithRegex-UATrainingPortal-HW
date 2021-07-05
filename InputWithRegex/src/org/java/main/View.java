@@ -1,5 +1,8 @@
 package org.java.main;
 
+/**
+ * Created by Koshkin Illia on 04.07.2021.
+ */
 public class View {
 
 	public static final String INVALID_INPUT =
@@ -13,8 +16,11 @@ public class View {
 			"Input contact's name, please. First letter must be capital.";
 	public static final String ASK_FOR_PATRONYMIC_INPUT = 
 			"Input contact's patronymic, please. First letter must be capital.";
+	
 	public static final String ASK_FOR_NICKNAME_INPUT = 
 			"Input contact's nickname, please. First letter must be capital.";
+	public static final String ASK_FOR_COMMENT_INPUT = 
+			"Input comment for this contact, please. Can't be larger than 64 characters.";
 	
 	public void printMessage(String message) {
 		System.out.println(message);

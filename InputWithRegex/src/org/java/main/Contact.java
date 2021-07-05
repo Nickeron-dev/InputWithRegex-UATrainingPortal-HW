@@ -1,12 +1,16 @@
 package org.java.main;
 
-public class Record {
+/**
+ * Created by Koshkin Illia on 04.07.2021.
+ */
+public class Contact {
 	
 	private String lastName;
 	private String firstName;
 	private String patronymic;
 	
 	private String nickname;
+	private String comment;
 	
 	public String getLastName() {
 		return lastName;
@@ -40,6 +44,14 @@ public class Record {
 		this.nickname = nickname;
 	}
 	
+	public String getComment() {
+		return comment;
+	}
+
+	public void setComment(String comment) {
+		this.comment = comment;
+	}
+
 	public String shortToString() {
 		return lastName + " " + firstName.substring(0, 1) + ".";
 	}
