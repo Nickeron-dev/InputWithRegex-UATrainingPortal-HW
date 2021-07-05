@@ -58,9 +58,19 @@ public class Model {
 		
 	}
 	
+	public void addHomePhoneToCurrentContact(String inputValue) {
+		currentContact.setHomePhone(inputValue);
+	}
+	
+	public void addMobilePhoneToCurrentContact(String inputValue) {
+		currentContact.setMobilePhone(inputValue);
+	}
+	
+	
 	public String currentContactShortToString() {
 		return currentContact.shortToString();
 	}
+	
 	
 	
 }

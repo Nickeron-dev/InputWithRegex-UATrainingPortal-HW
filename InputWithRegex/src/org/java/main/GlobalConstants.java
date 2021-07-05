@@ -14,6 +14,7 @@ public interface GlobalConstants {
 	public static final String COMMENT_REGEX = ".{1,64}";
 	public static final String GROUP_REGEX = "FAMILY|FRIENDS|NEIGHBOURS|WORK|OTHER|family|friends|neighbours|work|other";
 	
-	public static final String PHONE_REGEX = "\\d{3}-\\d{3}-\\d{2}-\\d{2}";
+	public static final String HOME_PHONE_REGEX = "044-\\d{3}-\\d{2}-\\d{2}";
+	public static final String MOBILE_PHONE_REGEX = "\\d{3}-\\d{3}-\\d{2}-\\d{2}";
 	
 }

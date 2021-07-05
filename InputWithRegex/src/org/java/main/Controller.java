@@ -44,6 +44,18 @@ public class Controller {
 		view.printMessage(View.ASK_FOR_GROUP_INPUT);
 		model.addGroupToCurrentContact(getInputValue(GlobalConstants.GROUP_REGEX));
 		
+		view.printMessage(View.ASK_FOR_HOME_PHONE_INPUT);
+		model.addHomePhoneToCurrentContact(getInputValue(GlobalConstants.HOME_PHONE_REGEX));
+		
+		view.printMessage(View.ASK_FOR_MOBILE_PHONE_INPUT);
+		model.addMobilePhoneToCurrentContact(getInputValue(GlobalConstants.MOBILE_PHONE_REGEX));
+		
+		/*
+		 * view.printMessage(View.ASK_FOR_MOBILE_PHONE_2_INPUT);
+		 * model.addMobilePhone2ToCurrentContact(getInputValue(GlobalConstants.
+		 * MOBILE_PHONE_REGEX));
+		 */
+		
 	}
 	
 	public String getInputValue(String regex) {
