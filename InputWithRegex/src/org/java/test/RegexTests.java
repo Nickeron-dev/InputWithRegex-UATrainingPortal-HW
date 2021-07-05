@@ -1,7 +1,5 @@
 package org.java.test;
 
-import static org.junit.Assert.*;
-
 import java.util.regex.Pattern;
 
 import org.java.main.GlobalConstants;

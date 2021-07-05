@@ -4,6 +4,7 @@ import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 
 import org.java.main.Controller;
+import org.java.main.GlobalConstants;
 import org.java.main.Model;
 import org.java.main.View;
 import org.junit.Assert;
@@ -34,24 +35,32 @@ public class MVCTests {
 		InputStream stream = System.in; // backup to restore later
 		
 		// first test
-		ByteArrayInputStream firstByteStream = new ByteArrayInputStream("50".getBytes());
+		ByteArrayInputStream firstByteStream = new ByteArrayInputStream("Name".getBytes());
 		System.setIn(firstByteStream);
 		
-		Assert.assertEquals("50", controller.getInputValue());
+		Assert.assertEquals("Name", controller.getInputValue(GlobalConstants.NAME_REGEX));
 		
 		// second test
-		ByteArrayInputStream secondByteStream = new ByteArrayInputStream("Name".getBytes());
+		ByteArrayInputStream secondByteStream = new ByteArrayInputStream("Nickname".getBytes());
 		System.setIn(secondByteStream);
 		
-		Assert.assertEquals("Name", controller.getInputValue());
+		Assert.assertEquals("Nickname", controller.getInputValue(GlobalConstants.NICKNAME_REGEX));
 		
 		System.setIn(stream);
 		
 	}
 	
 	@Test
-	public void isValid() {
+	public void isValidTest() {
+		// correct input
+		Assert.assertTrue(controller.isValid("Jack", GlobalConstants.NAME_REGEX));
+		Assert.assertTrue(controller.isValid("Happy", GlobalConstants.NICKNAME_REGEX));
+		Assert.assertTrue(controller.isValid("067-123-45-67", GlobalConstants.PHONE_REGEX));
 		
+		// invalid input
+		Assert.assertFalse(controller.isValid("", GlobalConstants.NAME_REGEX));
+		Assert.assertFalse(controller.isValid("happy", GlobalConstants.NICKNAME_REGEX));
+		Assert.assertFalse(controller.isValid("067-123-4567", GlobalConstants.NAME_REGEX));
 	}
 
 }
