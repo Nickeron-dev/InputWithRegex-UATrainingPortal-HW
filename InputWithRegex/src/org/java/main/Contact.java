@@ -11,6 +11,7 @@ public class Contact {
 	
 	private String nickname;
 	private String comment;
+	private Groups group;
 	
 	public String getLastName() {
 		return lastName;
@@ -50,6 +51,14 @@ public class Contact {
 
 	public void setComment(String comment) {
 		this.comment = comment;
+	}
+	
+	public Groups getGroup() {
+		return group;
+	}
+
+	public void setGroup(Groups group) {
+		this.group = group;
 	}
 
 	public String shortToString() {

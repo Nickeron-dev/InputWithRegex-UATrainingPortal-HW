@@ -21,6 +21,8 @@ public class View {
 			"Input contact's nickname, please. First letter must be capital.";
 	public static final String ASK_FOR_COMMENT_INPUT = 
 			"Input comment for this contact, please. Can't be larger than 64 characters.";
+	public static final String ASK_FOR_GROUP_INPUT = 
+			"Choose group for this contact, please. FAMILY / FRIENDS / NEIGHBOURS / WORK / OTHER";
 	
 	public void printMessage(String message) {
 		System.out.println(message);

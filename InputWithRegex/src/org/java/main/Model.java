@@ -35,8 +35,32 @@ public class Model {
 		currentContact.setComment(inputValue);
 	}
 	
+	public void addGroupToCurrentContact(String inputValue) {
+		if (inputValue.equals("FAMILY") || inputValue.equals("family")) {
+			currentContact.setGroup(Groups.FAMILY);
+		}
+		
+		if (inputValue.equals("FRIENDS") || inputValue.equals("friends")) {
+			currentContact.setGroup(Groups.FRIENDS);
+		}
+		
+		if (inputValue.equals("NEIGHBOURS") || inputValue.equals("neighbours")) {
+			currentContact.setGroup(Groups.NEIGHBOURS);
+		}
+		
+		if (inputValue.equals("WORK") || inputValue.equals("work")) {
+			currentContact.setGroup(Groups.WORK);
+		}
+		
+		if (inputValue.equals("OTHER") || inputValue.equals("other")) {
+			currentContact.setGroup(Groups.OTHER);
+		}
+		
+	}
+	
 	public String currentContactShortToString() {
 		return currentContact.shortToString();
 	}
+	
 	
 }

@@ -41,6 +41,9 @@ public class Controller {
 		view.printMessage(View.ASK_FOR_COMMENT_INPUT);
 		model.addCommentToCurrentContact(getInputValue(GlobalConstants.COMMENT_REGEX));
 		
+		view.printMessage(View.ASK_FOR_GROUP_INPUT);
+		model.addGroupToCurrentContact(getInputValue(GlobalConstants.GROUP_REGEX));
+		
 	}
 	
 	public String getInputValue(String regex) {

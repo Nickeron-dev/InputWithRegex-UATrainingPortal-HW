@@ -83,6 +83,32 @@ public class RegexTests {
 	}
 	
 	@Test
+	public void groupRegexTest() {
+		
+		boolean firstTest = Pattern.compile(GlobalConstants.GROUP_REGEX).matcher("Happy").matches();
+		Assert.assertFalse(firstTest);
+		
+		boolean secondTest = Pattern.compile(GlobalConstants.GROUP_REGEX).matcher("").matches();
+		Assert.assertEquals(false, secondTest);
+		
+		boolean thirdTest = Pattern.compile(GlobalConstants.GROUP_REGEX).matcher("family").matches();
+		Assert.assertTrue(thirdTest);
+		
+		boolean fourthTest = Pattern.compile(GlobalConstants.GROUP_REGEX).matcher("NEIGHBOURS").matches();
+		Assert.assertTrue(fourthTest);
+		
+		boolean fifthTest = Pattern.compile(GlobalConstants.GROUP_REGEX).matcher("FRIENDS").matches();
+		Assert.assertTrue(fifthTest);
+		
+		boolean sixthTest = Pattern.compile(GlobalConstants.GROUP_REGEX).matcher("WORK").matches();
+		Assert.assertTrue(sixthTest);
+		
+		boolean seventhTest = Pattern.compile(GlobalConstants.GROUP_REGEX).matcher("OTHER").matches();
+		Assert.assertTrue(seventhTest);
+		
+	}
+	
+	@Test
 	public void phoneRegexTest() {
 		
 		boolean firstTest = Pattern.compile(GlobalConstants.PHONE_REGEX).matcher("067-123-45-67").matches();
