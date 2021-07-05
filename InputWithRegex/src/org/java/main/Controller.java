@@ -17,8 +17,16 @@ public class Controller {
 	
 	// The Work method
 	public void run() {
-		view.printMessage(view.GREETING);
+		view.printMessage(View.GREETING);
 		
+		view.printMessage(View.ASK_FOR_NAME_INPUT);
+		model.createNewContact();
+		model.addNameToCurrentContact(getInputValue(GlobalConstants.NAME_REGEX));
+		
+		view.printMessage(View.ASK_FOR_NICKNAME_INPUT);
+		model.addNicknameToCurrentContact(getInputValue(GlobalConstants.NICKNAME_REGEX));
+		
+		view.printMessage(model.currentContactToString());
 	}
 	
 	public String getInputValue(String regex) {
@@ -26,15 +34,20 @@ public class Controller {
 				new BufferedReader(new InputStreamReader(System.in));
 		
 		String input = new String();
-		try {
-			input = reader.readLine();
-			if (isValid(input, regex)) {
-				return input;
+		while ( ! isValid(input, regex)) {
+			try {
+				input = reader.readLine();
+				if (isValid(input, regex)) {
+					return input;
+				}
+				else {
+					throw new Exception();
+				}
+			} catch (Exception e) {
+				view.printMessage(View.INVALID_INPUT);
 			}
-		} catch (Exception e) {
-			view.printMessage(View.INVALID_INPUT);
 		}
-		return "";
+		return input;
 	}
 
 	public boolean isValid(String target, String regex) {
