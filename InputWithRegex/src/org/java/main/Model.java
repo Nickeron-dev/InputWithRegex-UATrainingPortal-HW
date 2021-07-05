@@ -11,17 +11,24 @@ public class Model {
 	public void createNewContact() {
 		currentContact = new Record();
 	}
-
+	public void addLastNameToCurrentContact(String inputValue) {
+		currentContact.setLastName(inputValue);
+	}
+	
 	public void addNameToCurrentContact(String inputValue) {
 		currentContact.setName(inputValue);
+	}
+	
+	public void addPatronymicToCurrentContact(String inputValue) {
+		currentContact.setPatronymic(inputValue);
 	}
 	
 	public void addNicknameToCurrentContact(String inputValue) {
 		currentContact.setNickname(inputValue);
 	}
 	
-	public String currentContactToString() {
-		return currentContact.toString();
+	public String currentContactShortToString() {
+		return currentContact.shortToString();
 	}
 	
 }

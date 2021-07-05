@@ -19,14 +19,23 @@ public class Controller {
 	public void run() {
 		view.printMessage(View.GREETING);
 		
-		view.printMessage(View.ASK_FOR_NAME_INPUT);
 		model.createNewContact();
+		
+		view.printMessage(View.ASK_FOR_LAST_NAME_INPUT);
+		model.addLastNameToCurrentContact(getInputValue(GlobalConstants.LAST_NAME_REGEX));
+		
+		view.printMessage(View.ASK_FOR_NAME_INPUT);
 		model.addNameToCurrentContact(getInputValue(GlobalConstants.NAME_REGEX));
+		
+		view.printMessage(View.ASK_FOR_PATRONYMIC_INPUT);
+		model.addPatronymicToCurrentContact(getInputValue(GlobalConstants.PATRONYMIC_REGEX));
+		
+		view.printMessage(model.currentContactShortToString());
 		
 		view.printMessage(View.ASK_FOR_NICKNAME_INPUT);
 		model.addNicknameToCurrentContact(getInputValue(GlobalConstants.NICKNAME_REGEX));
 		
-		view.printMessage(model.currentContactToString());
+		
 	}
 	
 	public String getInputValue(String regex) {
