@@ -12,7 +12,9 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * Created by Koshkin Illia on 04.07.2021.
+ * Tests for MVC parts
+ * @author Illia Koshkin
+ *
  */
 public class MVCTests {
 	
@@ -20,6 +22,9 @@ public class MVCTests {
 	private View view;
 	private Controller controller;
 	
+	/**
+	 * Method that will run before each test
+	 */
 	@Before
 	public void init() {
 		
@@ -29,6 +34,9 @@ public class MVCTests {
 		
 	}
 	
+	/**
+	 * Test for getInputValue() in Controller
+	 */
 	@Test
 	public void getInputValueTest() {
 		
@@ -50,6 +58,9 @@ public class MVCTests {
 		
 	}
 	
+	/**
+	 * Test for isValid() method in Controller
+	 */
 	@Test
 	public void isValidTest() {
 		// correct input

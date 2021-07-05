@@ -5,20 +5,28 @@ import java.io.InputStreamReader;
 import java.util.regex.Pattern;
 
 /**
- * Created by Koshkin Illia on 04.07.2021.
+ * This is the Controller for my program.
+ * @author Illia Koshkin
+ *
  */
 public class Controller {
 	
 	private Model model;
 	private View view;
 	
-	// Constructor
+	/**
+	 * The constructor for Controller
+	 * @param model
+	 * @param view
+	 */
 	public Controller(Model model, View view) {
 		this.model = model;
 		this.view = view;
 	}
 	
-	// The Work method
+	/**
+	 * The Work method
+	 */
 	public void run() {
 		view.printMessage(View.GREETING);
 		
@@ -46,6 +54,11 @@ public class Controller {
 		
 	}
 	
+	/**
+	 * Method that gets value from console and checks it
+	 * @param regex that is in GlobalConstants
+	 * @return valid inputed value from console 
+	 */
 	public String getInputValue(String regex) {
 		BufferedReader reader =
 				new BufferedReader(new InputStreamReader(System.in));
@@ -66,7 +79,13 @@ public class Controller {
 		}
 		return input;
 	}
-
+	
+	/**
+	 * Method that checks a String
+	 * @param target String that will be checked
+	 * @param regex that has a rule for a target
+	 * @return if a String fits all rules
+	 */
 	public boolean isValid(String target, String regex) {
 		if (Pattern.compile(regex).matcher(target).matches()) {
 			return true;

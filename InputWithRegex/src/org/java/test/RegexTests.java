@@ -7,11 +7,15 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * Created by Koshkin Illia on 04.07.2021.
+ * Regex tests file
+ * @author Illia Koshkin
+ *
  */
 public class RegexTests {
 
-	// REGEX tests
+	/**
+	 * Test for last name regex
+	 */
 	@Test
 	public void lastNameRegexTest() {
 		
@@ -26,6 +30,9 @@ public class RegexTests {
 		
 	}
 	
+	/**
+	 * Test for first name regex
+	 */
 	@Test
 	public void nameRegexTest() {
 		
@@ -40,6 +47,9 @@ public class RegexTests {
 		
 	}
 	
+	/**
+	 * Test for patronymic regex
+	 */
 	@Test
 	public void patronymicRegexTest() {
 		
@@ -54,6 +64,9 @@ public class RegexTests {
 		
 	}
 	
+	/**
+	 * Test for nickname regex
+	 */
 	@Test
 	public void nicknameRegexTest() {
 		
@@ -68,6 +81,9 @@ public class RegexTests {
 		
 	}
 	
+	/**
+	 * Test for comment regex
+	 */
 	@Test
 	public void commentRegexTest() {
 		
@@ -82,6 +98,9 @@ public class RegexTests {
 		
 	}
 	
+	/**
+	 * Test for group regex
+	 */
 	@Test
 	public void groupRegexTest() {
 		
@@ -108,6 +127,9 @@ public class RegexTests {
 		
 	}
 	
+	/**
+	 * Test for phone regex
+	 */
 	@Test
 	public void phoneRegexTest() {
 		

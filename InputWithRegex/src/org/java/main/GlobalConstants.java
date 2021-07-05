@@ -1,7 +1,9 @@
 package org.java.main;
 
 /**
- * Created by Koshkin Illia on 04.07.2021.
+ * Global regex constants 
+ * @author Illia Koshkin
+ *
  */
 public interface GlobalConstants {
 	
