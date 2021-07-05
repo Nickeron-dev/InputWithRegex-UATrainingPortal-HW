@@ -3,7 +3,7 @@ package org.java.main;
 public class Record {
 	
 	private String lastName;
-	private String name;
+	private String firstName;
 	private String patronymic;
 	
 	private String nickname;
@@ -16,12 +16,12 @@ public class Record {
 		this.lastName = lastName;
 	}
 	
-	public String getName() {
-		return name;
+	public String getFirstName() {
+		return firstName;
 	}
 	
-	public void setName(String name) {
-		this.name = name;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 	
 	public String getPatronymic() {
@@ -41,7 +41,7 @@ public class Record {
 	}
 	
 	public String shortToString() {
-		return lastName + " " + name.substring(0, 1) + ".";
+		return lastName + " " + firstName.substring(0, 1) + ".";
 	}
 	
 	

@@ -29,13 +29,13 @@ public class RegexTests {
 	@Test
 	public void NameRegexTest() {
 		
-		boolean firstTest = Pattern.compile(GlobalConstants.NAME_REGEX).matcher("Jack").matches();
+		boolean firstTest = Pattern.compile(GlobalConstants.FIRST_NAME_REGEX).matcher("Jack").matches();
 		Assert.assertTrue(firstTest);
 		
-		boolean secondTest = Pattern.compile(GlobalConstants.NAME_REGEX).matcher("asdfasdf").matches();
+		boolean secondTest = Pattern.compile(GlobalConstants.FIRST_NAME_REGEX).matcher("asdfasdf").matches();
 		Assert.assertEquals(false, secondTest);
 		
-		boolean thirdTest = Pattern.compile(GlobalConstants.NAME_REGEX).matcher("058-123-4567").matches();
+		boolean thirdTest = Pattern.compile(GlobalConstants.FIRST_NAME_REGEX).matcher("058-123-4567").matches();
 		Assert.assertFalse(thirdTest);
 		
 	}

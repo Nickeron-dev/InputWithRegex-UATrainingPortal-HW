@@ -24,8 +24,8 @@ public class Controller {
 		view.printMessage(View.ASK_FOR_LAST_NAME_INPUT);
 		model.addLastNameToCurrentContact(getInputValue(GlobalConstants.LAST_NAME_REGEX));
 		
-		view.printMessage(View.ASK_FOR_NAME_INPUT);
-		model.addNameToCurrentContact(getInputValue(GlobalConstants.NAME_REGEX));
+		view.printMessage(View.ASK_FOR_FIRST_NAME_INPUT);
+		model.addFirstNameToCurrentContact(getInputValue(GlobalConstants.FIRST_NAME_REGEX));
 		
 		view.printMessage(View.ASK_FOR_PATRONYMIC_INPUT);
 		model.addPatronymicToCurrentContact(getInputValue(GlobalConstants.PATRONYMIC_REGEX));

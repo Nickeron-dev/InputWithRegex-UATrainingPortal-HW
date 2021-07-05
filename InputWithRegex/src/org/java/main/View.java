@@ -9,7 +9,7 @@ public class View {
 	
 	public static final String ASK_FOR_LAST_NAME_INPUT = 
 			"Input contact's last name, please. First letter must be capital.";
-	public static final String ASK_FOR_NAME_INPUT = 
+	public static final String ASK_FOR_FIRST_NAME_INPUT = 
 			"Input contact's name, please. First letter must be capital.";
 	public static final String ASK_FOR_PATRONYMIC_INPUT = 
 			"Input contact's patronymic, please. First letter must be capital.";

@@ -15,8 +15,8 @@ public class Model {
 		currentContact.setLastName(inputValue);
 	}
 	
-	public void addNameToCurrentContact(String inputValue) {
-		currentContact.setName(inputValue);
+	public void addFirstNameToCurrentContact(String inputValue) {
+		currentContact.setFirstName(inputValue);
 	}
 	
 	public void addPatronymicToCurrentContact(String inputValue) {
