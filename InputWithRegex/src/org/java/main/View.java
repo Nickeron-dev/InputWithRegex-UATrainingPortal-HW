@@ -26,6 +26,10 @@ public class View {
 			"Input comment for this contact, please. Can't be larger than 64 characters.";
 	public static final String ASK_FOR_GROUP_INPUT = 
 			"Choose group for this contact, please. FAMILY / FRIENDS / NEIGHBOURS / WORK / OTHER";
+	public static final String ASK_FOR_HOME_PHONE_INPUT = 
+			"Input contact's home phone number. Format: 044-XXX-XX-XX";
+	public static final String ASK_FOR_MOBILE_PHONE_INPUT = 
+			"Input contact's mobile phone number. Format: XXX-XXX-XX-XX";
 	
 	/**
 	 * Method that prints a message

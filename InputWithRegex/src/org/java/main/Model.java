@@ -1,8 +1,5 @@
 package org.java.main;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * This is the Model for my program.
  * @author Illia Koshkin
@@ -89,12 +86,27 @@ public class Model {
 	}
 	
 	/**
+	 * Method that adds home phone to a Contact
+	 * @param inputValue that was inserted by user.
+	 */
+	public void addHomePhoneToCurrentContact(String inputValue) {
+		currentContact.setHomePhone(inputValue);
+	}
+	
+	/**
+	 * Method that adds mobile phone to a Contact
+	 * @param inputValue that was inserted by user.
+	 */
+	public void addMobilePhoneToCurrentContact(String inputValue) {
+		currentContact.setMobilePhone(inputValue);
+	}
+	
+	/**
 	 * Output short information method
 	 * @return short information about a user.
 	 */
 	public String currentContactShortToString() {
 		return currentContact.shortToString();
 	}
-	
 	
 }

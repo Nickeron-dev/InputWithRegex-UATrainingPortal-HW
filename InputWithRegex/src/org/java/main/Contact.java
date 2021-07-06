@@ -14,6 +14,14 @@ public class Contact {
 	private String nickname;
 	private String comment;
 	private Groups group;
+
+	private String homePhone;
+	private String mobilePhone;
+	private String mobilePhone2;
+	
+	private String email;
+	private String skype;
+	private String address;
 	
 	/**
 	 * Getter for lastName
@@ -80,7 +88,7 @@ public class Contact {
 	}
 	
 	/**
-	 * Getter for lastName
+	 * Getter for comment
 	 * @return contact's comment
 	 */
 	public String getComment() {
@@ -110,6 +118,38 @@ public class Contact {
 	public void setGroup(Groups group) {
 		this.group = group;
 	}
+
+	/**
+	 * Getter for home phone
+	 * @return contact's home phone
+	 */
+	public String getHomePhone() {
+		return homePhone;
+	}
+	
+	/**
+	 * Setter for contact's home phone
+	 * @param homePhone which will be set to contact's home phone
+	 */
+	public void setHomePhone(String homePhone) {
+		this.homePhone = homePhone;
+	}
+
+	/**
+	 * Getter for mobile phone
+	 * @return contact's mobile phone
+	 */
+	public String getMobilePhone() {
+		return mobilePhone;
+	}
+	
+	/**
+	 * Setter for contact's mobile phone
+	 * @param mobile phone which will be set to contact's mobile phone
+	 */
+	public void setMobilePhone(String mobilePhone) {
+		this.mobilePhone = mobilePhone;
+	}
 	
 	/**
 	 * Method that returns a string with some info about user
@@ -118,6 +158,5 @@ public class Contact {
 	public String shortToString() {
 		return lastName + " " + firstName.substring(0, 1) + ".";
 	}
-	
 	
 }

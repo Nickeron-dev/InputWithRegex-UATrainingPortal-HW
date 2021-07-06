@@ -66,7 +66,7 @@ public class MVCTests {
 		// correct input
 		Assert.assertTrue(controller.isValid("Jack", GlobalConstants.FIRST_NAME_REGEX));
 		Assert.assertTrue(controller.isValid("Happy", GlobalConstants.NICKNAME_REGEX));
-		Assert.assertTrue(controller.isValid("067-123-45-67", GlobalConstants.PHONE_REGEX));
+		Assert.assertTrue(controller.isValid("067-123-45-67", GlobalConstants.MOBILE_PHONE_REGEX));
 		
 		// invalid input
 		Assert.assertFalse(controller.isValid("", GlobalConstants.FIRST_NAME_REGEX));
