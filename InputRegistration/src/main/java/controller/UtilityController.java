@@ -1,5 +1,6 @@
 package controller;
 
+import view.TextConstantsPaths;
 import view.View;
 
 import java.io.BufferedReader;
@@ -38,7 +39,7 @@ public class UtilityController {
                     throw new Exception();
                 }
             } catch (Exception e) {
-                view.printMessage(View.bundle.getString(View.INVALID_INPUT));
+                view.printMessage(View.bundle.getString(TextConstantsPaths.INVALID_INPUT));
             }
         }
         return input;
