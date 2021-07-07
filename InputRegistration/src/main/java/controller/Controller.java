@@ -43,15 +43,18 @@ public class Controller {
 
         view.printMessage(View.bundle.getString(TextConstantsPaths.ASK_FOR_LAST_NAME_INPUT));
         phoneBook.getContactByIndex(currentContactIndex)
-                .setLastName(utilityController.getInputValue(RegexCotainer.LAST_NAME_REGEX));
+                .setLastName(utilityController.getInputValue(View.bundle.getLocale().equals("en")
+                        ? RegexCotainer.LAST_NAME_REGEX : RegexCotainer.LAST_NAME_REGEX_UA));
 
         view.printMessage(View.bundle.getString(TextConstantsPaths.ASK_FOR_FIRST_NAME_INPUT));
         phoneBook.getContactByIndex(currentContactIndex)
-                .setFirstName(utilityController.getInputValue(RegexCotainer.FIRST_NAME_REGEX));
+                .setFirstName(utilityController.getInputValue(View.bundle.getLocale().equals("en")
+                        ? RegexCotainer.FIRST_NAME_REGEX : RegexCotainer.FIRST_NAME_REGEX_UA));
 
         view.printMessage(View.bundle.getString(TextConstantsPaths.ASK_FOR_PATRONYMIC_INPUT));
         phoneBook.getContactByIndex(currentContactIndex)
-                .setPatronymic(utilityController.getInputValue(RegexCotainer.PATRONYMIC_REGEX));
+                .setPatronymic(utilityController.getInputValue(View.bundle.getLocale().equals("en")
+                        ? RegexCotainer.PATRONYMIC_REGEX : RegexCotainer.PATRONYMIC_REGEX_UA));
 
         view.printMessage(phoneBook.getContactByIndex(currentContactIndex).shortToString());
 
