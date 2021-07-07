@@ -1,5 +1,8 @@
 package view;
 
+import java.util.Locale;
+import java.util.ResourceBundle;
+
 /**
  * This is the View for my program.
  * @author Illia Koshkin
@@ -9,7 +12,7 @@ public class View {
 
     // Ready outputs
     public static final String INVALID_INPUT =
-            "Sorry, you inputed invalid data. Please, try again.";
+            "input.wrong.data";
     public static final String GREETING =
             "Hi! Fill the following form, please!:";
     public static final String ASK_FOR_LAST_NAME_INPUT =
@@ -28,6 +31,10 @@ public class View {
             "Input contact's home phone number. Format: 044-XXX-XX-XX";
     public static final String ASK_FOR_MOBILE_PHONE_INPUT =
             "Input contact's mobile phone number. Format: XXX-XXX-XX-XX";
+    //input.wrong.data=Sorry, you inputted invalid data. Please, try again.
+    static String MESSAGES_BUNDLE_NAME = "messages";
+    public static final ResourceBundle bundle =
+            ResourceBundle.getBundle(MESSAGES_BUNDLE_NAME, new Locale("en"));
 
     /**
      * Method that prints a message

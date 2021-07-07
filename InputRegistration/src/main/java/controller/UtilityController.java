@@ -38,7 +38,7 @@ public class UtilityController {
                     throw new Exception();
                 }
             } catch (Exception e) {
-                view.printMessage(View.INVALID_INPUT);
+                view.printMessage(View.bundle.getString(View.INVALID_INPUT));
             }
         }
         return input;
