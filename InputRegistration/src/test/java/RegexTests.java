@@ -16,7 +16,7 @@ public class RegexTests {
      * Test for last name regex
      */
     @Test
-    public void lastNameRegexTest() {
+    public void lastNameRegexTestDefault() {
 
         boolean firstTest = Pattern.compile(CurrentRegexController.getLastNameRegex()).matcher("Jack").matches();
         Assert.assertTrue(firstTest);
@@ -33,7 +33,7 @@ public class RegexTests {
      * Test for first name regex
      */
     @Test
-    public void nameRegexTest() {
+    public void nameRegexTestDefault() {
 
         boolean firstTest = Pattern.compile(CurrentRegexController.getFirstNameRegex()).matcher("Jack").matches();
         Assert.assertTrue(firstTest);
@@ -50,7 +50,7 @@ public class RegexTests {
      * Test for patronymic regex
      */
     @Test
-    public void patronymicRegexTest() {
+    public void patronymicRegexTestDefault() {
 
         boolean firstTest = Pattern.compile(CurrentRegexController.getPatronymicRegex()).matcher("Jack").matches();
         Assert.assertTrue(firstTest);
