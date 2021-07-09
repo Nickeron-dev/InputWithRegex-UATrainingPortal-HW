@@ -1,8 +1,3 @@
-import java.io.BufferedReader;
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-
 import controller.Controller;
 import controller.CurrentRegexController;
 import controller.RegexCotainer;
@@ -12,6 +7,10 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import view.View;
+
+import java.io.BufferedReader;
+import java.io.ByteArrayInputStream;
+import java.io.InputStreamReader;
 
 /**
  * Tests for MVC parts

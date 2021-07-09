@@ -1,5 +1,7 @@
 package controller;
 
+import model.entity.NotUniqueNicknameException;
+import model.entity.UsersDB;
 import view.TextConstantsPaths;
 import view.View;
 
@@ -57,5 +59,21 @@ public class UtilityController {
         }
 
         return false;
+    }
+
+    public boolean isUniqueNickname(String inputNickname) {
+        UsersDB db = new UsersDB();
+        String[] nicknames = db.getAllNicknames();
+        for (int i = nicknames.length - 1; i >= 0; i--) {
+            if (inputNickname.equals(nicknames[i])) {
+                try {
+                    throw new NotUniqueNicknameException("Nickname: " + inputNickname + " is already used!");
+                } catch (NotUniqueNicknameException e) {
+                    e.printStackTrace();
+                }
+                return false;
+            }
+        }
+        return true;
     }
 }

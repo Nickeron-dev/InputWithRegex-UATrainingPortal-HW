@@ -22,5 +22,7 @@ public class TextConstantsPaths {
             "input.home.phone.data";
     public static final String ASK_FOR_MOBILE_PHONE_INPUT =
             "input.mobile.phone.data";
+    public static final String ASK_FOR_ANOTHER_NICKNAME =
+            "input.not.unique.nickname";
 
 }

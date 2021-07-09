@@ -60,8 +60,13 @@ public class Controller {
         view.printMessage(phoneBook.getContactByIndex(currentContactIndex).shortToString());
 
         view.printMessage(View.bundle.getString(TextConstantsPaths.ASK_FOR_NICKNAME_INPUT));
+        String inputNickname = utilityController.getInputValue(RegexCotainer.NICKNAME_REGEX);
+        while ( ! utilityController.isUniqueNickname(inputNickname)) {
+            view.printMessage(View.bundle.getString(TextConstantsPaths.ASK_FOR_ANOTHER_NICKNAME));
+            inputNickname = utilityController.getInputValue(RegexCotainer.NICKNAME_REGEX);
+        }
         phoneBook.getContactByIndex(currentContactIndex)
-                .setNickname(utilityController.getInputValue(RegexCotainer.NICKNAME_REGEX));
+                .setNickname(inputNickname);
 
         view.printMessage(View.bundle.getString(TextConstantsPaths.ASK_FOR_COMMENT_INPUT));
         phoneBook.getContactByIndex(currentContactIndex)

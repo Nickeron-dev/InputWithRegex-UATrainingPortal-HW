@@ -186,6 +186,10 @@ public class Contact {
         return lastName + " " + firstName.substring(0, 1) + ".";
     }
 
+    /**
+     * Overridden toString method
+     * @return all data about contact
+     */
     @Override
     public String toString() {
         return "Last name: " + lastName + "\nFirst name: " + firstName + "\nPatronymic: " + patronymic

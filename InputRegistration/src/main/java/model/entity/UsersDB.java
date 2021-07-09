@@ -1,5 +1,9 @@
 package model.entity;
 
+/**
+ * Users database imitation
+ * @author Illia Koshkin
+ */
 public class UsersDB {
 
     private PhoneBook phoneBook = new PhoneBook();
@@ -15,8 +19,20 @@ public class UsersDB {
                 "044-232-36-18", "073-423-32-23");
     }
 
+    /**
+     * Phone book getter
+     * @return phone book reference
+     */
     public PhoneBook getPhoneBook() {
         return phoneBook;
+    }
+
+    public String[] getAllNicknames() {
+        String[] answer = new String[phoneBook.getIterator() + 1];
+        for (int i = answer.length - 1; i >= 0; i--) {
+            answer[i] = phoneBook.getContactByIndex(i).getNickname();
+        }
+        return answer;
     }
 
 }
