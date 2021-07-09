@@ -1,5 +1,6 @@
 import java.util.regex.Pattern;
 
+import controller.CurrentRegexController;
 import controller.RegexCotainer;
 import org.junit.Assert;
 import org.junit.Test;
@@ -17,13 +18,13 @@ public class RegexTests {
     @Test
     public void lastNameRegexTest() {
 
-        boolean firstTest = Pattern.compile(RegexCotainer.LAST_NAME_REGEX).matcher("Jack").matches();
+        boolean firstTest = Pattern.compile(CurrentRegexController.getLastNameRegex()).matcher("Jack").matches();
         Assert.assertTrue(firstTest);
 
-        boolean secondTest = Pattern.compile(RegexCotainer.LAST_NAME_REGEX).matcher("asdfasdf").matches();
+        boolean secondTest = Pattern.compile(CurrentRegexController.getLastNameRegex()).matcher("asdfasdf").matches();
         Assert.assertEquals(false, secondTest);
 
-        boolean thirdTest = Pattern.compile(RegexCotainer.LAST_NAME_REGEX).matcher("058-123-4567").matches();
+        boolean thirdTest = Pattern.compile(CurrentRegexController.getLastNameRegex()).matcher("058-123-4567").matches();
         Assert.assertFalse(thirdTest);
 
     }
@@ -34,13 +35,13 @@ public class RegexTests {
     @Test
     public void nameRegexTest() {
 
-        boolean firstTest = Pattern.compile(RegexCotainer.FIRST_NAME_REGEX).matcher("Jack").matches();
+        boolean firstTest = Pattern.compile(CurrentRegexController.getFirstNameRegex()).matcher("Jack").matches();
         Assert.assertTrue(firstTest);
 
-        boolean secondTest = Pattern.compile(RegexCotainer.FIRST_NAME_REGEX).matcher("asdfasdf").matches();
+        boolean secondTest = Pattern.compile(CurrentRegexController.getFirstNameRegex()).matcher("asdfasdf").matches();
         Assert.assertEquals(false, secondTest);
 
-        boolean thirdTest = Pattern.compile(RegexCotainer.FIRST_NAME_REGEX).matcher("058-123-4567").matches();
+        boolean thirdTest = Pattern.compile(CurrentRegexController.getFirstNameRegex()).matcher("058-123-4567").matches();
         Assert.assertFalse(thirdTest);
 
     }
@@ -51,13 +52,13 @@ public class RegexTests {
     @Test
     public void patronymicRegexTest() {
 
-        boolean firstTest = Pattern.compile(RegexCotainer.PATRONYMIC_REGEX).matcher("Jack").matches();
+        boolean firstTest = Pattern.compile(CurrentRegexController.getPatronymicRegex()).matcher("Jack").matches();
         Assert.assertTrue(firstTest);
 
-        boolean secondTest = Pattern.compile(RegexCotainer.PATRONYMIC_REGEX).matcher("asdfasdf").matches();
+        boolean secondTest = Pattern.compile(CurrentRegexController.getPatronymicRegex()).matcher("asdfasdf").matches();
         Assert.assertEquals(false, secondTest);
 
-        boolean thirdTest = Pattern.compile(RegexCotainer.PATRONYMIC_REGEX).matcher("058-123-4567").matches();
+        boolean thirdTest = Pattern.compile(CurrentRegexController.getPatronymicRegex()).matcher("058-123-4567").matches();
         Assert.assertFalse(thirdTest);
 
     }

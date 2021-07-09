@@ -1,4 +1,4 @@
-package controller;
+package model.entity;
 
 /**
  * This is the Contact entity that represents a contact.
@@ -17,6 +17,23 @@ public class Contact {
 
     private String homePhone;
     private String mobilePhone;
+
+    public Contact() {
+
+    }
+
+    public Contact(String lastName, String firstName, String patronymic,
+                   String nickname, String comment, Groups group,
+                   String homePhone, String mobilePhone) {
+        this.lastName = lastName;
+        this.firstName = firstName;
+        this.patronymic = patronymic;
+        this.nickname = nickname;
+        this.comment = comment;
+        this.group = group;
+        this.homePhone = homePhone;
+        this.mobilePhone = mobilePhone;
+    }
 
     /**
      * Getter for lastName

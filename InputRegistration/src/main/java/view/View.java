@@ -10,9 +10,6 @@ import java.util.ResourceBundle;
  */
 public class View {
 
-    // Ready outputs
-
-
     static String MESSAGES_BUNDLE_NAME = "messages";
     public static final ResourceBundle bundle =
             ResourceBundle.getBundle(MESSAGES_BUNDLE_NAME,

@@ -1,6 +1,8 @@
 package controller;
 
 import model.Model;
+import model.entity.PhoneBook;
+import model.entity.UsersDB;
 import view.TextConstantsPaths;
 import view.View;
 
@@ -37,24 +39,23 @@ public class Controller {
 
         view.printMessage(View.bundle.getString(TextConstantsPaths.GREETING));
 
-        PhoneBook phoneBook = new PhoneBook();
+        UsersDB db = new UsersDB();
+        PhoneBook phoneBook = db.getPhoneBook();
 
-        int currentContactIndex = phoneBook.createNewContact();
+        phoneBook.createNewContact();
+        int currentContactIndex = phoneBook.getIterator();
 
         view.printMessage(View.bundle.getString(TextConstantsPaths.ASK_FOR_LAST_NAME_INPUT));
         phoneBook.getContactByIndex(currentContactIndex)
-                .setLastName(utilityController.getInputValue(View.bundle.getLocale().equals("en")
-                        ? RegexCotainer.LAST_NAME_REGEX : RegexCotainer.LAST_NAME_REGEX_UA));
+                .setLastName(utilityController.getInputValue(CurrentRegexController.getLastNameRegex()));
 
         view.printMessage(View.bundle.getString(TextConstantsPaths.ASK_FOR_FIRST_NAME_INPUT));
         phoneBook.getContactByIndex(currentContactIndex)
-                .setFirstName(utilityController.getInputValue(View.bundle.getLocale().equals("en")
-                        ? RegexCotainer.FIRST_NAME_REGEX : RegexCotainer.FIRST_NAME_REGEX_UA));
+                .setFirstName(utilityController.getInputValue(CurrentRegexController.getFirstNameRegex()));
 
         view.printMessage(View.bundle.getString(TextConstantsPaths.ASK_FOR_PATRONYMIC_INPUT));
         phoneBook.getContactByIndex(currentContactIndex)
-                .setPatronymic(utilityController.getInputValue(View.bundle.getLocale().equals("en")
-                        ? RegexCotainer.PATRONYMIC_REGEX : RegexCotainer.PATRONYMIC_REGEX_UA));
+                .setPatronymic(utilityController.getInputValue(CurrentRegexController.getPatronymicRegex()));
 
         view.printMessage(phoneBook.getContactByIndex(currentContactIndex).shortToString());
 

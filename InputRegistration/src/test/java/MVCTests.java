@@ -4,6 +4,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 import controller.Controller;
+import controller.CurrentRegexController;
 import controller.RegexCotainer;
 import controller.UtilityController;
 import model.Model;
@@ -49,7 +50,7 @@ public class MVCTests {
         UtilityController controllerU1 = new UtilityController(
                 new BufferedReader(new InputStreamReader(firstByteStream)), view);
 
-        Assert.assertEquals("Name", controllerU1.getInputValue(RegexCotainer.FIRST_NAME_REGEX));
+        Assert.assertEquals("Name", controllerU1.getInputValue(CurrentRegexController.getFirstNameRegex()));
 
         // second test
         ByteArrayInputStream secondByteStream = new ByteArrayInputStream("Nickname".getBytes());
@@ -66,14 +67,14 @@ public class MVCTests {
     @Test
     public void isValidTest() {
         // correct input
-        Assert.assertTrue(utilityController.isValid("Jack", RegexCotainer.FIRST_NAME_REGEX));
+        Assert.assertTrue(utilityController.isValid("Jack", CurrentRegexController.getFirstNameRegex()));
         Assert.assertTrue(utilityController.isValid("Happy", RegexCotainer.NICKNAME_REGEX));
         Assert.assertTrue(utilityController.isValid("067-123-45-67", RegexCotainer.MOBILE_PHONE_REGEX));
 
         // invalid input
-        Assert.assertFalse(utilityController.isValid("", RegexCotainer.FIRST_NAME_REGEX));
+        Assert.assertFalse(utilityController.isValid("", CurrentRegexController.getFirstNameRegex()));
         Assert.assertFalse(utilityController.isValid("happy", RegexCotainer.NICKNAME_REGEX));
-        Assert.assertFalse(utilityController.isValid("067-123-4567", RegexCotainer.FIRST_NAME_REGEX));
+        Assert.assertFalse(utilityController.isValid("067-123-4567", CurrentRegexController.getFirstNameRegex()));
     }
 
 }

@@ -1,4 +1,4 @@
-package controller;
+package model.entity;
 
 /**
  * Groups for contacts
